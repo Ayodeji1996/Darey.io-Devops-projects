@@ -1,4 +1,4 @@
-**Bash Script For Generating A Multiplication Table**
+**Bash Script For Generating A Multiplication Table**<br>
 #!/bin/bash
 echo"Enter a number"
 read n
