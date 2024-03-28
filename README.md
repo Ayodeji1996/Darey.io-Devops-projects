@@ -41,18 +41,6 @@ Then cd.. which takes me back the development branch i created.
 Then i go back to my GITHUB account to pull, commit and merge the request/changes.
 To test my changes i open my EC2 instance terminal and run "systemctl reload httpd" 
 then open a new web browser and refresh my EC2 ip address again.
-CHALLENGES :
-I first launced my EC2 instance using SSH .
-I generated SSH keypair using the command "ssh-keygen" successfully and i displayed and copy the public key with command "cat".
-I opened my GITHUB account navigate to setting ,
-then click on SSH and GPS keys, then click on add new ssh then paste the copied public kek and click add. 
-Then after i copied the SSH address i opened Git terminal to clone it , successfully. 
-So on my EC2 instance i installed httpd and when i tried to configure it using "sudo cp -r ~/MarketPeak_Ecommerce/* /var/www/html/" IT SAYS NOT A DIRECTORY.
-I tried multiple times but still getting negative comment so i tried to confirm if the SSH i added is working or connected.
-so i found out it is not connected and i went back again to try the same procees BUT still getting same error .
-So i created another key using the method on GITHUH help section which was later connected successfully after i tested it .
-Then go back again to configure  httpd but surprisely i still get same error..
-Not untill i used HTTP option of cloning a repository on Linux serve. Then i configured the httpd for website on EC2 instance using the step 4 highlighted above and i was able to deployed my website successfully.
 
 
 
