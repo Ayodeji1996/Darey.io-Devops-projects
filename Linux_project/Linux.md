@@ -2,7 +2,7 @@
 #!/bin/bash<br>
 echo"Enter a number<br>"
 read n<br>
-**Validation**
+**Validation**<br>
 if [ $n -gt 10] || [ $n -lt 0 ];then<br>
 echo"Number out of range"<br>
 exist 1<br>
