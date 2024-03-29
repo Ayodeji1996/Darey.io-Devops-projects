@@ -15,29 +15,24 @@ Clone the repository from GITHUB on Linux server using the HTTPS. <br>
 Navigating to CODE on GITHUB and copy the https option<br>
 Then on my git terminal i run "git clone then paste the https address then press Enter"<br>
 STEP 3 : **Install Web Server on EC2.**<br>
-On EC2 instance install APACHE webserver (httpd) for HTML files run "sudo su -" then "yum update -y" then "sudo install httpd" then "systemctl status httpd" then "systemctl enable httpd.
-STEP 4 :
-CONFIGURE HTTPD FOR WEBSITE:
-To do that i run "mkdir Marketpeak_Ecommerce" then  "cd Marketpeak_Ecommerce" 
-then "wget https://github.com/Ayodeji1996/MarketPeak_Ecommerce.git" then i run "ls -lrt" to see if the files are there.
-Then i run "wget ( my remote repository ZIP)" iF you navigate to CODE on your GITHUB click on the code then you will see DOWNLOAD ZIP.
-After that i run "ls -lrt command again"' there it shows that my website template have been added and saved as "Main" 
-then i run the command "unzip main" to add all the files in "Main" to Marketpeak_Ecommerce. 
-then i run "ls -lrt" and i see "Marketpek_Ecommerce-main" then i run "cd Marketpeak_Ecommerce-main"
-Then i run ls -lrt command and it shows list of  in HTML.
-then i run mv * /var/www/html/ because it is a directory structure on Linux system that host web content particularly for APCHE HTTP SERVER.
-then run cd /var/www/html, then i run 'ststemctl reload httpd".
-Then i opened a web browser to access my copied Ec2 instance ip address and the website was deployed.
-TO ENSURE CONTINUOUS INTEGRATION AND DEPLOYMENT WORKFLOW :
-On git terminal i changed directory "cd Marketpeak_Ecommerce"
-then create a new development branch and checkout with command "git checkout -b development" .This command created a new branch and change directory to the new branch
-Then i run "cd Marketpeak_Ecommerce" then i run "ls -l" to see whats in there . 
-Then i created a file with the command "touch file1.txt. 
-Then "echo 'my new changes to my repo' > file1.txt. 
-Then cd.. which takes me back the development branch i created.
-Then i go back to my GITHUB account to pull, commit and merge the request/changes.
-To test my changes i open my EC2 instance terminal and run "systemctl reload httpd" 
-then open a new web browser and refresh my EC2 ip address again.
+On EC2 instance install APACHE webserver (httpd) for HTML files run "sudo su -" then "yum update -y" then "sudo install httpd" then "systemctl status httpd" then "systemctl enable httpd.<br>
+STEP 4 :<br>
+**CONFIGURE HTTPD FOR WEBSITE:**<br>
+Run "mkdir Marketpeak_Ecommerce" then  "cd Marketpeak_Ecommerce"<br>
+then run "wget https://github.com/Ayodeji1996/MarketPeak_Ecommerce.git" then i run "ls -lrt" <br>
+Run "wget ( my remote repository ZIP)"then run "ls -lrt command again"' there it shows that my website template have been added and saved as "Main"<br>
+Run the command "unzip main" to add all the files in "Main" to Marketpeak_Ecommerce. <br>
+Run "ls -lrt" and i see "Marketpek_Ecommerce-main" then i run "cd Marketpeak_Ecommerce-main" run ls -lrt command.<br>
+Run mv * /var/www/html/ for APCHE HTTP SERVER.<br>
+then run cd /var/www/html, then i run 'ststemctl reload httpd".<br>
+Then i opened a web browser to access my copied Ec2 instance ip address and the website was deployed.<br>
+**TO ENSURE CONTINUOUS INTEGRATION AND DEPLOYMENT WORKFLOW:**<br>
+On git terminal i changed directory "cd Marketpeak_Ecommerce"<br>
+Then create a new development branch and checkout with command "git checkout -b development"<br>
+Then i run "cd Marketpeak_Ecommerce" then i run "ls -l" then create a file with the command "touch file1.txt.<br>
+Run "echo 'my new changes to my repo' > file1.txt" then run cd.<br>
+Then on your GITHUB account to pull, commit and merge the request/changes.<br>
+To test my changes i open my EC2 instance terminal and run "systemctl reload httpd" open a new web browser and paste EC2 ip address and refresh.
 
 
 
