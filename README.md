@@ -1,8 +1,7 @@
-PROJECT NAME:Ecommerce platform deployment with Git, Linux and Aws.
-STEP 1 :
-Open my git terminal to create a project name MARKETPEAK_ECOMMERCE "mkdir Marketpeak_Ecommerce" then cd "Marketpeak_Ecommerce" then "git init" command to initialize git repository
-Download Ecommerce website template @Tooplate then i Extract the downloaded Template into Marketpeak_Ecommerce directory( right click on the downloaded file click extract all then select Marketpeak_Ecommerce).
-Then i stage and commit the template to git using "git add ." git config --global user.name Ayodeji1996 i.e my git username and same command to config my user.email too.
+**Ecommerce platform deployment with Git, Linux and Aws.**<br>
+Open my git terminal to create a project name  **"mkdir Marketpeak_Ecommerce"** then cd *"Marketpeak_Ecommerce"* then "git init"<br>
+Download Ecommerce website template @Tooplate then i Extract the downloaded Template into Marketpeak_Ecommerce directory(right click on the downloaded file click extract all then select Marketpeak_Ecommerce)<br>
+Then i stage and commit the template to git using (**"git add"**) (git config --global user.name Ayodeji1996) and email respectively.<br>
 Then "git commit -m "initial commit with basic e-commerce site structure".
 PUSH THE CODE TO GITHUB REPOSITORY :
 Then i create a git repository name "Marketpeak_Ecommerce" on GITHUB leaving it empty without initializing anything like READ.ME etc to push in my code.
