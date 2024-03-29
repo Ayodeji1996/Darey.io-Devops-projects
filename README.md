@@ -1,23 +1,21 @@
 **Ecommerce platform deployment with Git, Linux and Aws.**<br>
 Open my git terminal to create a project name  **"mkdir Marketpeak_Ecommerce"** then cd *"Marketpeak_Ecommerce"* then "git init"<br>
 Download Ecommerce website template @Tooplate then i Extract the downloaded Template into Marketpeak_Ecommerce directory(right click on the downloaded file click extract all then select Marketpeak_Ecommerce)<br>
-Then i stage and commit the template to git using (**"git add"**) (git config --global user.name Ayodeji1996) and email respectively.<br>
-Then "git commit -m "initial commit with basic e-commerce site structure".
-PUSH THE CODE TO GITHUB REPOSITORY :
-Then i create a git repository name "Marketpeak_Ecommerce" on GITHUB leaving it empty without initializing anything like READ.ME etc to push in my code.
-Then i copy the remote repository URL on github by navigating to CODE, click on it to select the http URL then copy.
-Then on my terminal within my poject directory i add the remote repository URL "git remote add origin then paste the remote repository URL. 
-Then push my code "git push -u origin main"
-STEP 2 : Aws Deployment
-I login to my Aws Management console 
-I launch an EC2 instance using Amazon Linux AMI (Name my web Server, create a key then launch)
-Then navigate to the connect button click on EC2 then click connect.
-Then navigate to the connect button click on EC2 then click connect.
-Then i clone the repository from GITHUB on Linux server using the HTTPS by navigating to CODE on my GITHUB then copied the https option click .
-Then on my git terminal i run "git clone then paste the https address then press Enter"
-STEP 3 : Install Web Server on EC2.
-On my EC2 instance i installed APACHE webserver because it is used to serve HTML files by running "sudo su -" to take me back to root . Then "yum update -y" to update all the  nec
-y accept YES install. Then "systemctl status httpd" to check the status . Then "systemctl enable httpd.
+Use (**"git add"**) (git config --global user.name Ayodeji1996) and email respectively.<br>
+Then "git commit -m "initial commit with basic e-commerce site structure".<br>
+**PUSH THE CODE TO GITHUB REPOSITORY**<br>
+Create a git repository name "Marketpeak_Ecommerce" on GITHUB.<br>
+Copy the remote repository URL on github by navigating to CODE, click on it to select the http URL then copy.<br>
+On your terminalt "git remote add origin" then paste the remote repository URL and push code "git push -u origin main"<br>
+STEP 2 : **Aws Deployment**<br>
+login to Aws Management console<br> 
+launch an EC2 instance using Amazon Linux AMI<br>
+Then navigate to the connect button click on EC2 then click connect.<br>
+Clone the repository from GITHUB on Linux server using the HTTPS. <br> 
+Navigating to CODE on GITHUB and copy the https option<br>
+Then on my git terminal i run "git clone then paste the https address then press Enter"<br>
+STEP 3 : **Install Web Server on EC2.**<br>
+On EC2 instance install APACHE webserver (httpd) for HTML files run "sudo su -" then "yum update -y" then "sudo install httpd" then "systemctl status httpd" then "systemctl enable httpd.
 STEP 4 :
 CONFIGURE HTTPD FOR WEBSITE:
 To do that i run "mkdir Marketpeak_Ecommerce" then  "cd Marketpeak_Ecommerce" 
