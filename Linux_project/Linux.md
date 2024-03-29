@@ -5,7 +5,7 @@
 I implement the use of **Loop** to generate the multiplication table. And also use *if-else* statement to handle the conditional logic based on user's choice (full vs partial table and valid range input).
 
 **Attached Below The Script For Multiplication Table**<br>
-![Add new image](linux_project/image/script code.pdf)
+![Add new image](image/shellScript code.jpeg)
 
 
 
