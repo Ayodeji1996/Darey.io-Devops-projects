@@ -5,4 +5,8 @@ Scroll down you will see bucket policy click on edit. At the right hand side cli
 STEP 3 : **Testing**<br>
 Copy and paste the generated policy on your s3 bucket and click save changes.<br>
 Create a photo/image folder and upload a photo, and copy the URL link on a new web browser click Enter . it will display your image.<br>
-If you've assigned S3 to an IAM User, login the user to access S3 bucket to check if your changes has been made.
+If you've assigned S3 to an IAM User, login the user to access S3 bucket to check if your changes has been made.<br>
+
+**S3 Static Website Hosting**<br>
+1. Create S3 bucket<br>
+2. Upload static website content such as; HTML,CSS and other static content files for your website.<br>
