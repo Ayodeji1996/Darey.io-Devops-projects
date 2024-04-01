@@ -10,3 +10,7 @@ If you've assigned S3 to an IAM User, login the user to access S3 bucket to chec
 **S3 Static Website Hosting**<br>
 1. Create S3 bucket<br>
 2. Upload static website content such as; HTML,CSS and other static content files for your website.<br>
+3. Configure the bucket for static website hosting; in the s3 bucket, navigate to the **static website hosting** selection.<br>
+4. Choose "use this bucket to host a webite" and configure the index document.<br>
+5. Access the static website using the provide URL endpoint and verify that it displays correctly.
+
