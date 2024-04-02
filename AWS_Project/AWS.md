@@ -12,5 +12,11 @@ If you've assigned S3 to an IAM User, login the user to access S3 bucket to chec
 2. Upload static website content such as; HTML,CSS and other static content files for your website.<br>
 3. Configure the bucket for static website hosting; in the s3 bucket, navigate to the **static website hosting** selection.<br>
 4. Choose "use this bucket to host a webite" and configure the index document.<br>
-5. Access the static website using the provide URL endpoint and verify that it displays correctly.
+5. Access the static website using the provide URL endpoint and verify that it displays correctly.<br>
+
+**S3 Versioning and Replication**<br>
+1. In the S3 properties navigate to versioning section and enable.<br>
+2. Configure cross-region replication by navigating to management tab click on "Replication". Configure source region(your bucket region) then destination region(which is another region of your choice) then create or select IAM role for replication.<br>
+3. Upload an object to test versioning,modify the object and check versioning behaviour,check the verison history of the object.<br>
+4.  Verify that the object is replicated to the designated region.
 
