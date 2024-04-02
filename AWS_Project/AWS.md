@@ -23,7 +23,8 @@ If you've assigned S3 to an IAM User, login the user to access S3 bucket to chec
 **S3 Bucket Policy For CloudFront Website**<br>
 1. Create a S3 bucket, add a file or image.<br>
 2. Configure static website hosting by navigating to properties on your bucket then click on **static website hosting** enable it and configure the index document.<br>
-3. Create a cloudfront distribution . Navigate to CloudFront service on your AWS management console. Create distribution, choose **web** distribution type,configure the setting,specifing your S3 bucket as the origin. Click create and copy the policy that pop up.<br>
-4. Configure S3b bucket policy by navigation to **permission** on your S3, click on bucket policy paste the policy from cloudfront and click make changes.<br>
-Then copy the CloudFront distribution URL and paste on your new web browser .click Enter to test .
+3. Create a cloudfront distribution . Navigate to CloudFront service on your AWS management console. Create distribution, choose **web** distribution type,configure the setting,specifing your S3 bucket as the origin.<br>
+4. Click create and copy the policy that pop up.<br>
+5. Configure S3b bucket policy by navigation to **permission** on your S3, click on bucket policy paste the policy from cloudfront and click make changes.<br>
+6. Then copy the CloudFront distribution URL and paste on your new web browser .click Enter to test .
 
