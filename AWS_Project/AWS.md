@@ -26,5 +26,9 @@ If you've assigned S3 to an IAM User, login the user to access S3 bucket to chec
 3. Create a cloudfront distribution . Navigate to CloudFront service on your AWS management console. Create distribution, choose **web** distribution type,configure the setting,specifing your S3 bucket as the origin.<br>
 4. Click create and copy the policy that pop up.<br>
 5. Configure S3b bucket policy by navigation to **permission** on your S3, click on bucket policy paste the policy from cloudfront and click make changes.<br>
-6. Then copy the CloudFront distribution URL and paste on your new web browser /the image name on S3 bucket and press ENTER.
+6. Then copy the CloudFront distribution URL and paste on your new web browser /the image name on S3 bucket and press ENTER.<br>
+
+**Understanding Virtual Private Cloud**<br>
+Introduction to Networking: Networking is a system that allows multiple devices to communicate with one another.<br>
+How to create virtual private cloud(vcp) on AWS using Aws management console: Login to your Aws management console then navigate to VCP service. Click create VPC enter vpc name and select CIDR size. Click create.
 
