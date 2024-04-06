@@ -41,5 +41,24 @@ For private route table you just gonna assiocate it with subnet association. Cli
 **Creating An EC2 instance into the Pubic Route**<br>
 1. Go to AWS management console, click on EC2 instance and Launch an instance . Create a name for your instance(test-ec2-public-sub-instance) choose ubuntu and create a key pair if you dont have one then **Edit** Networking setting . Choose the VPC you created and choose te public subnet your created as well.Then **Enable** Auto Assign Public IP then you name a security group(test-ec2-SG).<br>
 2. Then click on Launch instances.<br>
-3. Then you SSH into the running instance: open the "key.pem" you generate from your instance then copy the SSH connect link from your instance then in your terminal then press ENTER. 
+3. Then you SSH into the running instance: open the "key.pem" you generate from your instance then copy the SSH connect link from your instance then in your terminal then press ENTER.
+   **Deploying ALB(Application Load Balancer) On Two EC2 Instances**<br>
+   STEP 1. Create a **VPC**<br>
+   On your AWS navigate to VPC click create vpc select IP range 12.0.0.0/16.Then click create vpc.<br>
+   Create **Internet Gateway And Attach To Vpc**<br>
+   Click on vpc dashboard navigate to Internet Gateway, click create internet gatwway specify a *Name tag* and click on create internet gateway.<br>
+   On the internet gateway click on *Action* go to *Attach VPC* then select the vpc you created then click Attached to internet gateway.<br>
+   Create **Public Subnet**<br>
+   On Vpc dashboard navigate to *Subnet* click create subnet, select the vpc created then select the 1a public subnet name ,select a zone and specify the IP range 12.0.1.0/24. Create the second 1b public subnet specifing the IP range 12.0.3.0/24 following same step and click create subnet. so that **Two** EC2  instacnce can be created so we can load balamce traffic into the two EC2 instance.<br>
+   Create **Route Table**<br>
+   Navigate  to route table click create and specify a route name, select th vpc you create then click create route table. On the route table click subnet association then click *Edit subnet association* then select the two public subnet created and click *Save association*. Inside the route table click on **Route** then click *edit route* specify the IP range 0.0.0.0/0 (which means it will have an internet access and anyone can have access to those public subnet) then select internet gateway you created then click save changes.<br>
+STEP 2 . Create **TWO EC2 INSTANCE**<br>
+On AWS management navigate to EC2 click launch instance then specify your instance name then choose Ubuntu operating system, choose or create a key pair then *Edit Network settings* select the vpc you've created, select subnet then *Enable* Auto Assign Public IP then click on *Add security group* select HTTP and ANYWHERE then scroll down to user date and add the script/package you want to get installed into your EC2 machine. Then click on launch instance.<br>
+Copy your EC2 instance ID to verify if your package is running. Follow same step to create the second EC2 instance.<br>
+STEP 3. Create **TARGET GROUP**
+On Ec2 Dashboard navigate to Target Group click on create group input the name click on Next then select the two instances you created then click on *Incude as pending below*.Then click on create target group.<br>
+Create **ALB**
+On EC2 dashboard navigate to *Load Balancer* click on create load balancer and select Application Load Balancer, specify a name then select the VPC you created ,then select both subnet created. Click on create security group, select a group name put a *Description* that says Allow Access From Internet, choose the VPC. Then inbound rule use (HTTP then source "Anywhere 0.0.0.0/0") then click create security group.Then go back to your Load Balancer and select the security group you created .<br>
+Under Listener and Routing select a Target group you created. Click on create Load Balancer. <br>
+After the Load Balancer has been created copy the DNS which wil be used to access the internet ad confirm the traffic you've created paste it on a new web browser and reload .
 
