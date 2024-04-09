@@ -68,4 +68,7 @@ Attached an existing load balancer, select health check then click next then sel
 **Configuring Route53 With Ec2 Instance**<br>
 On AWS console navigate to Route53, create a Domain name if you dont have then click on *Create Hoated Zone* inout your domain name and click create.Now to define record, click on create record choose simple routing then click next, click on define simple record then choose (IP address then copy the Elastic IP address from your ec2 and paste it there then select **A** record type then clik Define record. Create one more record which is type **c** , record name (www) then choose the IP address then paste your *domain name* then click on define record then click on create record.<br>
 If you're using another domain name provider copy the NS(namespace) one by one then go to your domain provider and edit changes and paste the namespace then click save changes.<br>
-TO VERIFY: Copy your domain name and paste it on a new web browser it will revolve the domain to the IP address o your EC2.
+TO VERIFY: Copy your domain name and paste it on a new web browser it will revolve the domain to the IP address o your EC2.<br>
+**Setting Up Amazon RDS with MYSQL Engine**<br>
+On your Aws management console navigate to RDS click on database, click create database and select MYSQL Engine. Configure the RDS settings, including master username and password. On the RDS instance click on connectivity, click on the security group and set the inbound rules to allow **MYSQL Traffic**.<br>
+Use MYSQL client (Workbench) to connect to the RDS instance provided the Endpoint,master username and password.
