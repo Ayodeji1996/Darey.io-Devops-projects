@@ -21,7 +21,7 @@ Navigate to RDS on your Aws dashboard create Amazon RDS instance with MYSQL Engi
 Navigate to EFS and configure security group to the EFS-Sg created and click create file system.<br>
 CREATE *Master Ec2 instance for installation of Web Server*<br>
 1) On the instance configure the Network Vpc and subnet to the one you created and select the *Web-public-Sg* from existing security group after the instance has been launched navigavte to *Elastic IP* and allocate Ip address and associate it with the instance.<br>
-WORDPRESS SETUP ON MASTER SERVER<br>
+**WORDPRESS SETUP ON MASTER SERVER**<br>
 a) SSH into the master instance and run the following command;<br>
 sudo -i (To change to root)<br>
 apt -get update (To update applicaions)<br>
@@ -42,9 +42,11 @@ cp -r wordpress/* /var/www/html/<br>
 d) cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php(Create wp-config.php file)
 e) vim /var/www/html/wp-config.php(Open it in vim editor or Nano); Edit the *database name*, *Username*, *Password* and *hostname/RDS Endpoint* information to the RDS instance to connect wordpress with RDS .Then save<br>
 f) Go to your EC2 instance copy the public IP and paste it on your browser to access wordpress site and fill in your information then click *Install wordpress*. After installation enter yout username and password to login.<br>
-CREATE ALB AND AUTOSCALING <br>
-On EC2 dashboard navigate to Load Balancer click on create load balancer and select Application Load Balancer, specify a name then select the VPC you created ,then select both subnet created. Click on create security group, select a group name put a Description that says Allow Access From Internet, choose the VPC, choose security group and create a new target group using MASTERSERVER INSTANCE for wordpress and click create ALB. After the Load Balancer has been created copy the DNS paste it on a new web browser and reload you will be able to access your wordpress site.<br>
-
+**CREATE ALB AND AUTOSCALING**<br>
+On EC2 dashboard navigate to Load Balancer click on create load balancer and select Application Load Balancer, specify a name then select the VPC you created ,then select both subnet created. Click on create security group, select a group name put a Description that says Allow Access From Internet, choose the VPC, choose security group created for ALB and create a new target group using MASTERSERVER INSTANCE for wordpress and click create ALB. After the Load Balancer has been created copy the DNS paste it on a new web browser and reload you will be able to access your wordpress site.<br>
+**FOR AUTOSCALING**: On your EC2 dashboard navigate to Auto Scaling click create Auto scaling group specify your group name ,click on create a lanuch template, create an Image of worpress instancee first by navigating to your instance click on the wordpress instance, click on ACTIONS then click on image and template click on create image,specify your image name then add describtion(Image for Auto Scaling Group) and click on create image. Then you go back to Launch template specify your template name then add description and select an AMI which is the image you created,select the instance type,select the key pair,select the security group for Autoscaling and click create launch template.<br>
+Then you go back to the Auto scaling page then select the template you created click on next, select the VPC, select the subnets you created and click next. Attached an existing load balancer, select health check then click next then select the EC2 capacity and minimum you want to be created, select Target tracking policy click next then click create Auto Scaling group.<br>
+Confirm by deleting the first instance created by auto scaling group and a new one will be created .
 
 
 
