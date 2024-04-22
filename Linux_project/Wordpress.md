@@ -41,7 +41,11 @@ tar -xzf latest.tar.gz<br>
 cp -r wordpress/* /var/www/html/<br>
 d) cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php(Create wp-config.php file)
 e) vim /var/www/html/wp-config.php(Open it in vim editor or Nano); Edit the *database name*, *Username*, *Password* and *hostname/RDS Endpoint* information to the RDS instance to connect wordpress with RDS .Then save<br>
-f) Go to your EC2 instance copy the public IP and paste it on your browser to access wordpress site and fill in your information then click *Install wordpress*
+f) Go to your EC2 instance copy the public IP and paste it on your browser to access wordpress site and fill in your information then click *Install wordpress*. After installation enter yout username and password to login.<br>
+CREATE ALB AND AUTOSCALING <br>
+On EC2 dashboard navigate to Load Balancer click on create load balancer and select Application Load Balancer, specify a name then select the VPC you created ,then select both subnet created. Click on create security group, select a group name put a Description that says Allow Access From Internet, choose the VPC, choose security group and create a new target group using MASTERSERVER INSTANCE for wordpress and click create ALB. After the Load Balancer has been created copy the DNS paste it on a new web browser and reload you will be able to access your wordpress site.<br>
+
+
 
 
 
